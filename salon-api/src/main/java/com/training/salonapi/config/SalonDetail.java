@@ -1,12 +1,20 @@
-package com.training.salonapi;
+package com.training.salonapi.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
 @Configuration
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SalonDetail {
 	@Value("${SalonDetails.name}")
 	private String name;
@@ -26,5 +34,16 @@ public class SalonDetail {
 	@Value("${SalonDetails.phone}")
 	private String phone;
 
-	// Getters and Setters go here
+	@Override
+	public SalonDetail clone() {
+
+		SalonDetail salonDetails = new SalonDetail();
+		salonDetails.address = address;
+		salonDetails.city = city;
+		salonDetails.state = state;
+		salonDetails.zipcode = zipcode;
+		salonDetails.phone = phone;
+		salonDetails.name = name;
+		return salonDetails;
+	}
 }

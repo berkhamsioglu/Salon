@@ -3,9 +3,6 @@ package com.training.salonapi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-@EnableSwagger2
 @SpringBootApplication
 public class SalonApiApplication {
 
@@ -13,5 +10,4 @@ public class SalonApiApplication {
 		SpringApplication.run(SalonApiApplication.class, args);
 
 	}
-
 }

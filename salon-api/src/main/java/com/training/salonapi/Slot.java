@@ -13,15 +13,19 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
-@NoArgsConstructor
-@ToString
+@Getter
+@Setter
+@EqualsAndHashCode
 public class Slot {
+
+	public Slot() {
+
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
