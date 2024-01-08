@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: white;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.progress-container {
+  height: 2em;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.progress-container .progress {
+  height: 100%;
+  background-color: #FFFF00;
+  transition: all 0.6s ease;
+  width: 0px;
+}
+
+.progress-container .progress.finished {
+  background-color: #00FF00;
 }
